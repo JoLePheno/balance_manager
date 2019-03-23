@@ -1,0 +1,23 @@
+syntax = "proto3";
+package api;
+
+message User {
+    string name = 1;
+    int64 id = 2;
+    int64 solde = 3;
+}
+
+message Transaction {
+  int64 id = 1;
+  int64 accountId = 2;
+  string description = 3;
+  string currency = 4;
+  string notes = 5;
+  int64 amount = 6;
+}
+service Ping {
+  rpc NewUser(Transaction) returns (Transaction) {}
+  rpc Debiter(Transaction) returns (Transaction) {}
+  rpc Crediter(Transaction) returns (Transaction) {}
+  rpc GetAmount(Transaction) returns (Transaction) {}
+}
