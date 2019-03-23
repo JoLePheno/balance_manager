@@ -5,19 +5,19 @@ Balance manager microservices application using gRPC server with protocbuf commu
   
   docker-compose up
 
-#Build project:
+Build project:
 
-  #Generate protoc:
+  Generate protoc:
     cd balance/
     sudo chmod 755 protoc-gen.sh
     ./protoc-gen.sh
   
-  #Build balance:
+  Build balance:
     cd balance/cmd/server/
     go build .
     ./server
   
-  #Build transaction:
+  Build transaction:
     cd transaction/cmd/server/
     go build .
     ./server -id=<> -accountId=<> -description=<> -currency=<> -notes=<> -amount=<> -param=<crediter / debiter / getAmount>
