@@ -1,6 +1,6 @@
 # balance_manager
 
-Simulate balance manager microservices application using gRPC server with protocbuf communication
+Simulation of a balance manager microservices application using gRPC server with protocbuf communication
 
 # Start mysql database & phpmyadmin:
   
